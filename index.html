@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Pre-emptive Action Revision by Environmental Feedback for Embodied Instruction Following Agents">
+  <meta name="keywords" content="Replanning, Environmental Feedback, Brain plasticity, Embodied AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pre-emptive Action Revision by Environmental Feedback for Embodied Instruction Following Agents</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({            
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+    });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://jinyeonkim.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://twoongg.github.io/projects/realfred/">
+            ReALFRED
+          <a class="navbar-item" href="https://bhkim94Nerfies, D-NeRF, NeRF.github.io/projects/CAPEAM">
+            CAPEAM
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered is-full-width">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="font-size:41px">
+            Pre-emptive Action Revision by Environmental Feedback for Embodied Instruction Following Agents
+          </h1>
+          <h1 class="title is-4 publication-title">
+            CoRL 2024
+
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="http://jinyeonkim.github.io">Jinyeon Kim</a><sup>1,2,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Cheolhong Min</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://bhkim94.github.io">Byeonghwi Kim</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://ppolon.github.io">Jonghyun Choi</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Seoul National University,</span>
+            <span class="author-block"><sup>2</sup>Yonsei University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=cq2uB30uBM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=" https://github.com/snumprlab/pred"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://openreview.net/pdf?id=cq2uB30uBM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <!-- <h2 class="title is-3">Visualization</h2> -->
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/DTA_APM.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/OHV.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ASR.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ASR.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ASR.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ASR.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ASR.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        <img src='static/figures/teaser.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:1100%;max-width:100%;none height:100% ; max-height:100%">
+        <span class="dnerf">Pre-emptive Action Revision by Environmental feeDback (PRED) </span>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              When we, humans, perform a task, we consider changes in environments such as objects' arrangement due to interactions with objects and other reasons; e.g., when we find a mug to clean, if it is already clean, we skip cleaning it. But even the state-of-the-art embodied agents often ignore changed environments when performing a task, leading to failure to complete the task, executing unnecessary actions, or fixing the mistake after it was made. Here, we propose <b>Pre-emptive Action Revision by Environmental feeDback</b> (<b>PRED</b>) that allows an embodied agent to revise their action in response to the perceived environmental status before it makes mistakes. We empirically validate PRED and observe that it outperforms the prior art on two challenging benchmarks in the virtual environment, TEACh and ALFRED, by noticeable margins in most metrics, including unseen success rates, with shorter execution time, implying an efficiently behaved agent. Furthermore, we demonstrate the effectiveness of the proposed method with real robot experiments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3">Revising Actions using Environmental Feedback</h2>
+    <div class="content has-text-justified">
+      <p>
+        The state-of-the-art embodied agents revise their original plans after taking actions and encountering failures. But failure may result in irreversible consequences e.g., spilling milk on the floor. 
+        To address the issue, the agent <span style="font-weight:bold">revises its original action plan before failure</span> based on <span style="font-weight:bold">environmental feedback</span> when unexpected scenarios such as <span style="font-weight:bold">"environmental discrepancies"</span> occur. 
+        The system uses a function that generates a revised plan by querying a large language model (LLM) with a feedback prompt describing the discrepancy. 
+        Four modules—Dynamic Target Adaptation, Object Heterogeneity Verification, Attribute-Driven Plan Modification, 
+        and Action Skipping by Relationship—are proposed to handle different types of discrepancies, 
+        improving the agent's ability to adjust its actions effectively.
+      </p>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-fullwidth">
+          <img src='static/figures/overview.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:100%;max-width:100%">
+        </div>
+      </div>
+    </div>
+    <h3 class="title is-4">Environmental Feedback</h3>
+    <div class="columns is-centered">
+      <div class="column is-two-quarters">
+        <p>
+          <h3 class="title is-5"> Dynamic Target Adaptation (DTA)</h3>
+          The agent considers 'presence discrepancy'—whether the target object is in the expected location—and adapts its action plan by revising navigation targets to improve efficiency when objects are found in unexpected locations.
+          <img src='static/figures/DTA_sim.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:85%;max-width:85%">
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h3 class="title is-5"> Attribute-Driven Plan Modification (APM)</h3>
+          The agent considers 'attribute discrepancy'—whether the target object's state, such as dirty or clean, is as expected. If not, the agent adjusts its action plan by adding or removing steps to align with the current state of the object.
+          <img src='static/figures/APM_sim.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:85%;max-width:85%">
+        </p>
+      </div>
+      <div class="column is-two-quarter">
+        <p>
+          <h3 class="title is-5">Object Heterogeneity Verification (OHV)</h3>
+          The agent considers 'appearance discrepancy'—whether it interacted correctly with the desired object—and improves the success rate by verifying if the interacted object is correct, comparing its appearance from different viewpoints.
+          <img src='static/figures/OHV_sim.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:85%;max-width:85%">
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h3 class="title is-5"> Action Skipping by Relationship (ASR)</h3>
+          The agent considers 'object-object relationship discrepancy'—whether the target object is placed on another object and whether that location is already the target position—and reduces unnecessary actions by adjusting its plan to pass the target object if it is already in the correct location without further interaction.
+          <img src='static/figures/ASR_sim.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:85%;max-width:85%">
+        </p>
+        
+      </div>
+    </div>
+    
+    <h3 class="title is-4">Revising Actions</h3>
+    <div class="columns is-centered">
+      <div class="column is-two-quarters">
+        <div class="content has-text-justified">
+          <p>
+             When an agent faces unexpected scenarios caused by 'differences' between inferred and observed states, referred to as 'environmental discrepancies,' <span style="font-weight:bold">PRED</span> revises a original plan, $\{a_n\}_{n=1}^N$, by querying a large language model, \(\mathcal{L}\), with a prompt, \(\mathcal{P}\).
+             \(\mathcal{P}\) concatenates a system prompt, \(\mathcal{P}_{s}\), for a general description and guide of the task, the original plan, and a feedback prompt, \(\mathcal{P}_f\), which describes the discrepancy encountered as environmental feedback generated by the LLM.
+             Then \(\mathcal{L}\) receives \(\mathcal{P}\) and produces a revised plan, $\{a'_k\}_{k=1}^K$ as:
+             \begin{equation}
+             \label{eq:revising_actions}
+                 \{a'_k\}_{k=1}^K = \mathcal{L}(\mathcal{P}) \quad \text{where} \quad \mathcal{P}=[\mathcal{P}_{s}; \{a_n\}_{n=1}^N; \mathcal{P}_f].
+             \end{equation}
+          </p>
+          <p>
+            Additional details of revising actions are provided in the Appendix C.1. To build a feedback prompt,
+            we consider four types of environmental discrepancies caused by the presence, appearance, attributes,
+            and relationships of objects based on visual information that occupies a large proportion of sensory
+            information perceived by humans.
+          </p>
+        </div>
+      </div>
+      <div class="column is-two-quarter">
+        <img src='static/figures/cap.png' style="margin-left: auto; margin-right: auto; display: block; border-style: none width:100%;max-width:100%">
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <h2 class="title is-3">Results</h2>
+      <div class="content has-text-justified">
+        <p>
+          We compare PRED with prior state-of-the-art methods on the <span style="color: #305fac; font-weight:bold"><a href="https://teachingalfred.github.io/">TEACh</a></span> and <span style="color: #305fac; font-weight:bold"><a href="https://askforalfred.com/">ALFRED</a></span> benchmarks summarized in Table 1 and Table 2, respectively.
+          Both benchmarks have three environment splits: 'train,' 'validation,' and 'test.' However, in TEACh, the 'test' split is replaced by 'validation.'
+          The validation and test environments are further divided into two folds, seen and unseen, to assess the generalization capacity.
+          The primary metric is the success rate, denoted by ‘SR,’ which measures the percentage of completed tasks.
+          Another metric is the goal-condition success rate, denoted by ‘GC,’ which measures the percentage of satisfied goal conditions.
+          Finally, path-length-weighted (PLW) scores penalize SR and GC by the length of the actions that the agent takes.
+        </p>
+        <p>
+          In the TEACh benchmark, in TfD and EDH setups, we observe that PRED outperforms the previous methods in unseen/seen environments for SR and GC, which implies the effectiveness of our proposed
+          PRED.
+          Table 2 shows the prior arts and PRED’s performance in the ALFRED benchmark with a few different settings. We include the ‘Reproduced’ section because the reproduced results of previous methods
+          differ slightly from the originally reported ones. 
+          As shown in Table 2, we observe that our method outperforms the prior arts in all metrics, implying the effectiveness of the proposed components.
+        </p>
+        <p>
+          For more details, please check out the <span style="color: #305fac; font-weight:bold"><a href="https://openreview.net/pdf?id=cq2uB30uBM">paper</a></span>.
+        </p>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="static/tables/sota_TEACh_ALFRED.png" width="700">
+            <!-- <img src="static/tables/comparison_with_sota_ALFRED.png" width="600"> -->
+            <h5>Comparison with State of the Art</h5>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="static/figures/DTA_real.png" style="margin-left: auto; margin-right: auto; display: block; border-style: none width:80%;max-width:80%">
+            &nbsp;
+            <h5>Dynamic Target Adaptation (DTA)</h5>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="static/figures/OHV_real.png" style="margin-left: auto; margin-right: auto; display: block; border-style: none width:80%;max-width:80%">
+            &nbsp;
+            <h5>Object Heterogeneity Verification (OHV)</h5>
+          </div>
+        </div>
+
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="static/figures/ASR_real.png" style="margin-left: auto; margin-right: auto; display: block; border-style: none width:80%;max-width:80%">
+            <h5>Action Skipping by Relationship (ASR)</h5>
+          </div>
+        </div>
+
+
+        <!-- <h5>Comparison with State of the Art</h5>
+        <div class="columns is-centered has-text-centered">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img src="static/tables/sota_TEACh_ALFRED.png" width="800">
+              <img src="static/tables/comparison_with_sota_ALFRED.png" width="600">
+              <h5>Comparison with State of the Art</h5>
+            </div>
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img src="static/figures/qualitative_cap.png" width="650">
+              <h5>Context-Aware Planning</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-quarter">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-two-quarter">
+                <img src="static/figures/qualitative_ror.png">
+                <h5>Retrospective Object Recognition</h5>
+              </div>
+            </div>
+
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-two-quarter">
+                <img src="static/figures/qualitative_ort.png">
+                <h5>Object Relocation Tracking</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-two-quarter">
+            <img src="static/figures/qualitative_olc.png">
+            <h5>Object Location Caching</h5>
+          </div>
+
+        </div> -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{kim2023context,
+  author    = {Kim, Jinyeon and Min, Cheolhong and Kim, Byeonghwi and Choi, Jonghyun},
+  title     = {Pre-emptive Action Revision by Environmental Feedback for Embodied Instruction Following Agents},
+  booktitle = {CoRL},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          The website template is from <a href="https://github.com/nerfies/nerfies.github.io">here</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Default Statcounter code for CAPEAM
+https://bhkim94.github.io/projects/CAPEAM/ -->
+<script type="text/javascript">
+var sc_project=12971295;
+var sc_invisible=1;
+var sc_security="0892640d";
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12971295/0/0892640d/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
